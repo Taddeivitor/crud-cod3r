@@ -16,9 +16,9 @@ const initialState = {
 
 export default class UserCrud extends Component {
 
-    state = { ...initialState}
+    state = { ...initialState }
 
-    componentMount() {
+    componentWillMount() {
         axios(baseUrl).then(resp => {
             this.setState({ list: resp.data })
         })
